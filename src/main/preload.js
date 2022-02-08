@@ -4,6 +4,7 @@ contextBridge.exposeInMainWorld('electron', {
   ipcRenderer: {
     myPing() {
       ipcRenderer.send('ipc-example', 'ping');
+      
     },
     on(channel, func) {
       const validChannels = ['ipc-example'];
